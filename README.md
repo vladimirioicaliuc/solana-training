@@ -1,6 +1,7 @@
 Node Version
 
 `node v20`
+
 To generate secret in env file
 
 `npm run generate-secret`
