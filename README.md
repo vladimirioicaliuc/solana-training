@@ -26,3 +26,18 @@ To extract private key from env file and to be able to use it in Phantom
 
 `npm run export-keypair-tobase58`
 
+### Curs 3
+
+To transfer 0.1 sol using a sender from env file and using devnet connection
+
+Important 
+
+Go to curs3/transfer.ts
+
+Update `RECEIVER_ADDRESS` const and use an address for the person you want to send 0.1 sol
+
+`npm run transfer`
+
+last run signature  to check in solana explorer
+`42Nn1esm3Ze2CC1LqevrQGGfZmt9TsFc8trwaNKFpt3cX75w7CfvyPb3MjGBgi78M3yQVDUbjuaBD2PUtQJw5UBV`
+

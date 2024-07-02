@@ -9,13 +9,15 @@
     "generate-keypair": "npm run generate-secret && npx esrun curs1/generate-keypair.ts",
     "check-balance": "npx esrun curs2/check-balance.ts",
     "airdrop-sol": "npx esrun curs2/airdrop-sol.ts",
-    "export-keypair-tobase58": "npx esrun curs2/export-keypair-tobase58.ts"
+    "export-keypair-tobase58": "npx esrun curs2/export-keypair-tobase58.ts",
+    "transfer": "npx esrun curs3/transfer.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@solana-developers/helpers": "^2.3.0",
+    "@solana/spl-memo": "^0.2.5",
     "@solana/web3.js": "^1.93.1",
     "bs58": "^6.0.0",
     "dotenv": "^16.4.5",

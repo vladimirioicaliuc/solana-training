@@ -1,11 +1,15 @@
 import "dotenv/config";
-import { Connection, clusterApiUrl } from "@solana/web3.js";
-import {getBalanceInSol, getPublicKeyFromEnv} from './utils';
+import {Connection, clusterApiUrl, PublicKey} from "@solana/web3.js";
+import {getKeypairFromEnvironment} from "@solana-developers/helpers";
+import {getBalanceInSol} from "../utils";
 
 const connection = new Connection(clusterApiUrl("devnet"));
 console.log("Connected to devnet");
 
-const publicKey = getPublicKeyFromEnv();
+const keyFromEnv = getKeypairFromEnvironment("SECRET_KEY");
+const keyToCheck = keyFromEnv.publicKey.toBase58();
+console.log(`Public key: ${keyToCheck}`);
+const publicKey = new PublicKey(keyToCheck);
 
 const balanceInLamport = await connection.getBalance(publicKey);
 

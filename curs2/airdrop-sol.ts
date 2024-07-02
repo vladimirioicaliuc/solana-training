@@ -1,12 +1,14 @@
 import "dotenv/config";
-import { Connection, LAMPORTS_PER_SOL, clusterApiUrl } from "@solana/web3.js";
-import { airdropIfRequired } from "@solana-developers/helpers";
-import {getPublicKeyFromEnv} from "./utils";
+import {Connection, LAMPORTS_PER_SOL, clusterApiUrl, PublicKey} from "@solana/web3.js";
+import {airdropIfRequired, getKeypairFromEnvironment} from "@solana-developers/helpers";
 
 const connection = new Connection(clusterApiUrl("devnet"));
 console.log("Connected to devnet");
 
-const publicKey = getPublicKeyFromEnv();
+const keyFromEnv = getKeypairFromEnvironment("SECRET_KEY");
+const keyToCheck = keyFromEnv.publicKey.toBase58();
+console.log(`Public key: ${keyToCheck}`);
+const publicKey = new PublicKey(keyToCheck);
 
 const airdropAmount = 2 * LAMPORTS_PER_SOL;
 const minimumBalance = 5 * LAMPORTS_PER_SOL;
