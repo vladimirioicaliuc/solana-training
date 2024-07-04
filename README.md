@@ -38,6 +38,14 @@ Update `RECEIVER_ADDRESS` const and use an address for the person you want to se
 
 `npm run transfer`
 
-last run signature  to check in solana explorer
+last run signature to check in solana explorer
 `42Nn1esm3Ze2CC1LqevrQGGfZmt9TsFc8trwaNKFpt3cX75w7CfvyPb3MjGBgi78M3yQVDUbjuaBD2PUtQJw5UBV`
+
+### Curs 4
+
+`npm run create-token-mint` to create a token mint
+
+`npm run create-token-account` to create a token account 
+
+`npm run mint-tokens` to mint tokens
 
