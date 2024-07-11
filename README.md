@@ -49,3 +49,6 @@ last run signature to check in solana explorer
 
 `npm run mint-tokens` to mint tokens
 
+### Curs 5
+
+`npm run curs5-start` to create a nft

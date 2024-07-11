@@ -13,15 +13,21 @@
     "transfer": "npx esrun curs3/transfer.ts",
     "create-token-mint": "npx esrun curs4/create-token-mint.ts",
     "create-token-account": "npx esrun curs4/create-token-account.ts",
-    "mint-tokens": "npx esrun curs4/mint-tokens.ts"
+    "mint-tokens": "npx esrun curs4/mint-tokens.ts",
+    "curs5-start": "ts-node curs5/index.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "devDependencies": {
+    "ts-node": "^10.8.0",
+    "typescript": "^4.6.4"
+  },
   "dependencies": {
+    "@metaplex-foundation/js": "^0.17.12",
     "@solana-developers/helpers": "^2.3.0",
     "@solana/spl-memo": "^0.2.5",
-    "@solana/spl-token": "^0.4.7",
+    "@solana/spl-token": "^0.3.7",
     "@solana/web3.js": "^1.93.1",
     "bs58": "^6.0.0",
     "dotenv": "^16.4.5",
